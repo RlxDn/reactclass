@@ -1,25 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Nav />
+        <Article />
+      </div>
+    );
+  }
 }
+
+class Header extends Component {
+  render() {
+    return (
+      <div>
+        <header>
+        <h1>WEB</h1>
+        웹은 WWW (World Wide Web) 을 부르는 말 입니다.
+        </header>
+      </div>
+    )
+  }
+}
+
+class Nav extends Component {
+  render() {
+    return (
+      <div>
+        <nav>
+          <ul>
+            <li><a href="1.html">World</a></li>
+            <li><a href="2.html">Wide</a></li>
+            <li><a href="3.html">Web</a></li>
+          </ul>
+        </nav>
+      </div>
+    )
+  }
+}
+
+class Article extends Component {
+  render() {
+    return (
+      <div>
+        <article>
+          <h2>react</h2>
+          react 는 무슨 뜻?
+        </article>
+      </div>
+    )
+  }
+}
+
 
 export default App;
